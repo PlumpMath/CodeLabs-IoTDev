@@ -33,6 +33,7 @@ The following is required to complete this module:
 - [Visual Studio Community 2015][2] with [Update 1][3] or greater
 - [IoT Core Dashboard and Tools][4]
 - [Azure Device Explorer][7].
+-  ** [Direct Link for Device Explorer](https://github.com/Azure/azure-iot-sdks/releases/download/2016-03-28/SetupDeviceExplorer.msi) **
 - [Raspberry Pi board with Windows IoT Core image][5]
 - [GHI FEZ HAT][6]
 
@@ -176,7 +177,7 @@ This task uses an existing Universal application that will be deployed to your R
 
 1. In **Solution Explorer**, right-click the **IoTWorkshop** project, and then click **Manage NuGet Packages**.
 
-1. In the **NuGet Package Manager** window, click **Browse** and search for **Microsoft Azure Devices**, click **Install** to install the **Microsoft.Azure.Devices.Client** package, and accept the terms of use.
+1. In the **NuGet Package Manager** window, click **Browse** and search for **Microsoft Azure Devices** and **PCL Crypto**, click **Install** to install the **Microsoft.Azure.Devices.Client** and **PCLCrypto** packages, and accept the terms of use.
 
     This downloads, installs, and adds a reference to the [Microsoft Azure IoT Service](https://www.nuget.org/packages/Microsoft.Azure.Devices/) SDK NuGet package.
 
@@ -268,7 +269,7 @@ In order to allow several consumer applications to read data from the IoT Hub in
 
 In this task you'll create two Consumer Groups for the website to avoid conflicts with other consumers.
 
-> **Important Note:** In order to use the EventProcessorHost class, for Build 2016, you must create an Azure Storage account to enable the EventProcessorHost to record checkpoint information. Please follow the instructions in [About Azure Storage](https://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/#create-a-storage-account) to create a new one. Make a note of the storage account connection string because you'll need it later.
+> **Important Note:** In order to use the EventProcessorHost class, for Build 2016, you must create an Azure Storage account to enable the EventProcessorHost to record checkpoint information. **Please follow the instructions in [About Azure Storage](https://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/#create-a-storage-account) to create a new one. Make a note of the storage account connection string because you'll need it later.**
 
 1. Open the Azure Portal (https://portal.azure.com/), and select the IoT Hub you created.
 
@@ -300,7 +301,7 @@ In this task, you'll deploy the website to an Azure Web Site.
 
 1. In Visual Studio, right-click the project name and select **Publish**.
 
-1. Select **Microsoft Azure App Service**.
+1. Select **Microsoft Azure App Service**. **(Note that the name has been changed to Web App. Please select that.)**
 
 	![Selecting Publish Target](Images/selecting-publish-target.png?raw=true "Selecting Publish target")
 
